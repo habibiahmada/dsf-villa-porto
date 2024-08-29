@@ -1,14 +1,9 @@
-// Ambil semua link navbar
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav ul li a");
 
-// Loop melalui setiap link navbar
 navLinks.forEach((link) => {
   link.addEventListener("click", function (event) {
-    // Hapus kelas 'active' dari semua link
     navLinks.forEach((link) => link.classList.remove("active"));
-
-    // Tambahkan kelas 'active' ke link yang diklik
     this.classList.add("active");
   });
 });
@@ -16,7 +11,6 @@ navLinks.forEach((link) => {
 window.addEventListener("scroll", () => {
   let current = "";
 
-  // Loop melalui setiap section untuk mendeteksi yang sedang terlihat
   sections.forEach((section) => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
@@ -26,7 +20,6 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  // Loop melalui link navbar dan sesuaikan dengan bagian yang terlihat
   navLinks.forEach((link) => {
     link.classList.remove("active");
 
@@ -57,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Pilih elemen-elemen yang ingin diberi animasi
   const elements = document.querySelectorAll(".fade-in");
   elements.forEach((el) => observer.observe(el));
 });
@@ -70,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
     hamburgerMenu.classList.toggle("active");
   });
 
-  // Optional: Close menu when clicking outside
   document.addEventListener("click", (event) => {
     if (
       !hamburgerMenu.contains(event.target) &&
