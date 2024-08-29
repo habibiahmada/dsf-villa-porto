@@ -487,7 +487,7 @@ table tr td img {
 
 @media screen and (max-width: 500px) {
   header a img {
-    width: 60%;
+    width: 80%;
   }
   nav ul {
     display: none;
@@ -760,7 +760,7 @@ table tr td img {
 @media screen and (min-width: 500px) and (max-width: 1024px) {
   /* Style untuk tablet */
   header a img {
-    width: 80%;
+    width: 90%;
   }
   nav ul {
     display: none;
